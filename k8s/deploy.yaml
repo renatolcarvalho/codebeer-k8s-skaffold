@@ -15,7 +15,7 @@ spec:
         app: example-deployment
     spec:
       containers:
-      - name: dotnetcoreexample
+      - name: example-deployment
         image: renatolcarvalho/dotnetexample
         ports:
         - containerPort: 80
