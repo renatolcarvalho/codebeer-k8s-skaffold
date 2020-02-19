@@ -2,9 +2,14 @@ apiVersion: skaffold/v2alpha1
 kind: Config
 metadata:
   name: k-s-skaffold
+build:
+  artifacts:
+  - image: renatolcarvalho/dotnetexample
 deploy:
   kubectl:
     manifests:
+    - nginx-ingress\01-mandatory.yaml
+    - nginx-ingress\02-cloud-generic.yaml
     - k8s\deploy.yaml
     - k8s\service.yaml
     - k8s\ingress.yaml
